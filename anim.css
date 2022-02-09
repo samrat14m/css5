@@ -1,0 +1,116 @@
+body{
+    border-left: 10px solid orange;
+    border-top: 10px solid whitesmoke;
+    border-right: 10px solid green;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+.sky{
+    height: 380px;
+    width: 100%;
+    z-index:-2;
+}
+
+.city{
+    height: 250px;
+    width:125%;
+    position: relative;
+    top:-250px;
+    background-repeat:repeat-x ;
+    animation: move-right-city 5s linear infinite;
+    animation-fill-mode: forwards;
+    z-index:-1;
+}
+
+@keyframes move-right-city {
+    from{transform: translateX(0px);}
+    to{transform: translateX(-300px);}
+}
+
+.road{
+    background-image: url(./images/road\ \(1\).jpg);
+    height:160px;
+    width:500%;
+    position: relative;
+    top:-250px;
+    background-repeat: repeat-x;
+    animation: move-right-road 1.5s linear infinite;
+    animation-fill-mode: forwards;
+    z-index:-1;
+}
+
+@keyframes move-right-road {
+    from{transform: translateX(0px);}
+    to{transform: translateX(-1220px);}
+}
+
+.car{
+    height: 120px;
+    width:300px;
+    background-image: url(./images/car\ \(1\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top:-470px;
+    left:450px;
+    animation: car-bump 3s linear infinite;
+    
+}
+@keyframes car-bump {
+    to{transform: translateY(10px);}
+}
+
+
+.wheel1{
+    position: relative;
+    top:65px;
+    left:203px;
+}
+.wheel2{
+    position: relative;
+    top:65px;
+    left:-28px;
+}
+
+.rotate{
+    width:50px;
+    animation-name: wheel-rotate;
+    animation-duration: 1ms;
+    animation-iteration-count: infinite;
+}
+@keyframes wheel-rotate {
+    from{transform: rotate(0deg);
+    }
+    to{transform: rotate(360deg);}
+}
+.sun{
+    height: 400px;
+    width:  400px;
+    position: relative;
+    top:-1000px;
+    margin-left:800px;
+    animation: move-right-sun 10s linear infinite;
+}
+@keyframes move-right-sun {
+    from{transform: translateX(0px);}
+    to{transform: translateX(-150px);} 
+}
+.back{
+    position: relative;
+    top:-750px;
+    left:560px; 
+}
+.greet{
+    position: relative;
+    top:-1320px;
+    margin-left: 30px;
+    font-size: 3.2em;
+    color: rgb(0, 0, 165);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.a{background-color: orange;}
+.b{background-color: whitesmoke;}
+.c{background-color: green;}
